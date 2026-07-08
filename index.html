@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>王骏翔 | 个人求职网站</title>
+    <meta
+      name="description"
+      content="王骏翔的个人网站，展示 LLM 游戏代理、多模态 3D 感知、嵌入式与电子信息工程相关经历。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="field" aria-hidden="true"></canvas>
+    <div class="cursor-light" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回首页">王骏翔</a>
+      <nav aria-label="主导航">
+        <a href="#projects">项目</a>
+        <a href="#skills">技能</a>
+        <a href="#timeline">经历</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <picture>
+            <source srcset="./assets/portrait-final-dark-sharp.webp" type="image/webp" />
+            <img src="./assets/portrait-final-dark-sharp.jpg" alt="" />
+          </picture>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">数据科学与人工智能硕士在读</p>
+          <h1 id="hero-title">王骏翔</h1>
+          <p class="hero-lead">
+            关注 LLM Agent、开放世界游戏任务规划、多模态 3D 感知与嵌入式系统，希望将 AI
+            研究能力、工程实现能力和硬件背景结合起来，投入真实产品与研发场景。
+          </p>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="button primary" href="#projects">查看项目</a>
+            <a class="button ghost" href="./assets/wang-junxiang-resume.docx" download>下载简历</a>
+            <a class="button ghost" href="mailto:edwardwang0728@gmail.com">发送邮件</a>
+          </div>
+        </div>
+        <div class="hero-facts" aria-label="个人信息">
+          <span>利物浦大学</span>
+          <span>数据科学与人工智能</span>
+          <span>+86 13277819291</span>
+        </div>
+      </section>
+
+      <section class="section intro" aria-labelledby="intro-title">
+        <p class="section-kicker">个人定位</p>
+        <h2 id="intro-title">电子信息工程背景，正在走向 AI Agent 与智能感知研发。</h2>
+        <p>
+          本科阶段训练于电子信息工程，熟悉硬件设计、嵌入式开发与测试流程；硕士阶段聚焦数据科学与人工智能，
+          当前研究方向是基于 LLM 的开放世界游戏任务规划代理。求职方向偏 AI 应用研发、智能体工程、数据科学、
+          嵌入式/物联网与智能感知相关岗位。
+        </p>
+      </section>
+
+      <section class="section projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="section-kicker">代表项目</p>
+          <h2 id="projects-title">研究与项目</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured reveal tilt-card">
+            <div class="project-topline">
+              <span>硕士毕业项目 / 进行中</span>
+              <span>智能体规划</span>
+            </div>
+            <h3>基于 LLM 的开放世界游戏任务规划代理</h3>
+            <p>
+              面向开放世界游戏场景，研究任务理解、目标分解、行动规划与执行反馈，使代理能够根据游戏状态生成可执行的任务步骤。
+            </p>
+            <ul>
+              <li>探索提示设计、上下文管理与迭代式规划。</li>
+              <li>关注复杂任务中的自主性、可解释性与执行闭环。</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal tilt-card">
+            <div class="project-topline">
+              <span>小组研究报告 / 组长</span>
+              <span>3D 感知</span>
+            </div>
+            <h3>传感器退化下的鲁棒多模态 3D 目标检测研究</h3>
+            <p>
+              统筹小组分工、研究路线和报告整合，主导 PV-RCNN 基线、Gaussian noise 注入、late-fusion 建模、空间对齐与工程验证。
+            </p>
+            <ul>
+              <li>使用 KITTI、PV-RCNN、YOLOv8 与 OpenPCDet。</li>
+              <li>clean data 下 PV-RCNN mAP 83.69%，严重 Gaussian noise 下为 5.20%。</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal tilt-card">
+            <div class="project-topline">
+              <span>嵌入式 / 物联网</span>
+              <span>ESP32</span>
+            </div>
+            <h3>基于 ESP32 的物联网水质监测系统</h3>
+            <p>
+              围绕传感器采集、嵌入式控制与物联网通信构建水质监测原型，体现硬件系统与软件逻辑的综合能力。
+            </p>
+          </article>
+
+          <article class="project-card reveal tilt-card">
+            <div class="project-topline">
+              <span>软件开发</span>
+              <span>C / MQTT</span>
+            </div>
+            <h3>学生成绩管理系统与 MQTT 定位跟踪系统</h3>
+            <p>
+              完成 C 语言管理系统、基于 MQTT 的定位跟踪系统等项目，覆盖基础软件开发、通信协议与系统功能设计。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="section-kicker">能力结构</p>
+          <h2 id="skills-title">技能版图</h2>
+        </div>
+
+        <div class="skill-board">
+          <div class="skill-column reveal">
+            <h3>AI 与研究</h3>
+            <p>LLM Agent、开放世界游戏任务规划、PV-RCNN、YOLOv8、OpenPCDet、KITTI、LiDAR-Camera late fusion</p>
+          </div>
+          <div class="skill-column reveal">
+            <h3>编程与嵌入式</h3>
+            <p>Python、C/C++、Arduino、KEIL、ESP32、MQTT</p>
+          </div>
+          <div class="skill-column reveal">
+            <h3>硬件与测试</h3>
+            <p>Altium Designer、嘉立创 PCB 绘制、EMC 测试、元器件选型替代</p>
+          </div>
+          <div class="skill-column reveal">
+            <h3>AI 效率工具</h3>
+            <p>Codex、Claude Code，用于研究整理、代码辅助与文档迭代。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section timeline" id="timeline" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <p class="section-kicker">成长路径</p>
+          <h2 id="timeline-title">教育与经历</h2>
+        </div>
+
+        <div class="timeline-list">
+          <article class="timeline-item reveal">
+            <time>2026.01 - 至今</time>
+            <h3>利物浦大学 · 数据科学与人工智能硕士</h3>
+            <p>学习数据库和信息系统、应用人工智能、人工智能和通信等方向课程，正在推进 LLM 游戏代理研究。</p>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2024.07 - 2025.01</time>
+            <h3>深圳莱福德科技股份有限公司 · 助理器件工程师</h3>
+            <p>负责各类物料承认与元器件替代测试，完成百款物料承认、数十款物料替代测试。</p>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2020.09 - 2024.07</time>
+            <h3>桂林电子科技大学 · 电子信息工程本科</h3>
+            <p>主修 C 语言、数字逻辑、模拟电子、通信原理、图像处理、嵌入式原理及应用等课程。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section awards" aria-labelledby="awards-title">
+        <div class="section-heading">
+          <p class="section-kicker">能力证明</p>
+          <h2 id="awards-title">证书与获奖</h2>
+        </div>
+        <div class="award-row reveal">
+          <span>大学英语 CET-6</span>
+          <span>雅思 6.5</span>
+          <span>第七届中国国际“互联网+”大学生创新创业大赛广西赛区铜奖</span>
+        </div>
+      </section>
+
+      <section class="contact-band" id="contact" aria-labelledby="contact-title">
+        <p class="section-kicker">联系我</p>
+        <h2 id="contact-title">正在寻找 AI、智能体、数据科学或嵌入式相关机会。</h2>
+        <div class="contact-links">
+          <a href="mailto:edwardwang0728@gmail.com">edwardwang0728@gmail.com</a>
+          <a href="tel:+8613277819291">+86 13277819291</a>
+          <a href="./assets/wang-junxiang-resume.docx" download>下载 Word 简历</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 王骏翔</span>
+      <span>静态网站，可免费部署到 GitHub Pages / Cloudflare Pages / Netlify</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
