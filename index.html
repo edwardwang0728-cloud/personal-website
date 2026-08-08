@@ -6,7 +6,7 @@
     <title>王骏翔 | 个人求职网站</title>
     <meta
       name="description"
-      content="王骏翔的个人网站，展示 LLM 游戏代理、多模态 3D 感知、嵌入式与电子信息工程相关经历。"
+      content="王骏翔的个人网站，展示 Job Agent、LLM 游戏代理、多模态 3D 感知、嵌入式与电子信息工程相关经历。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -36,8 +36,8 @@
           <p class="eyebrow">数据科学与人工智能硕士在读</p>
           <h1 id="hero-title">王骏翔</h1>
           <p class="hero-lead">
-            关注 LLM Agent、开放世界游戏任务规划、多模态 3D 感知与嵌入式系统，希望将 AI
-            研究能力、工程实现能力和硬件背景结合起来，投入真实产品与研发场景。
+            关注 LLM Agent 系统、岗位分析与学习规划、开放世界游戏任务规划、多模态 3D 感知与嵌入式系统，
+            希望将 AI 研究能力、工程实现能力和硬件背景结合起来，投入真实产品与研发场景。
           </p>
           <div class="hero-actions" aria-label="主要操作">
             <a class="button primary" href="#projects">查看项目</a>
@@ -57,8 +57,8 @@
         <h2 id="intro-title">电子信息工程背景，正在走向 AI Agent 与智能感知研发。</h2>
         <p>
           本科阶段训练于电子信息工程，熟悉硬件设计、嵌入式开发与测试流程；硕士阶段聚焦数据科学与人工智能，
-          当前研究方向是基于 LLM 的开放世界游戏任务规划代理。求职方向偏 AI 应用研发、智能体工程、数据科学、
-          嵌入式/物联网与智能感知相关岗位。
+          已完成基于 LLM 的开放世界游戏任务规划代理研究，并独立完成岗位分析与学习规划 Job Agent。
+          求职方向偏 AI 应用研发、智能体工程、数据科学、嵌入式/物联网与智能感知相关岗位。
         </p>
       </section>
 
@@ -71,16 +71,34 @@
         <div class="project-grid">
           <article class="project-card featured reveal tilt-card">
             <div class="project-topline">
-              <span>硕士毕业项目 / 进行中</span>
-              <span>智能体规划</span>
+              <span>个人独立项目 / 已完成</span>
+              <span>Agent · Skill · MCP · Memory</span>
+            </div>
+            <h3>Job Agent：岗位分析与个性化学习规划智能体</h3>
+            <p>
+              输入岗位 JD、个人简历或技能与学习周期，自动提取带原文证据的岗位要求，分析技能匹配与缺口，并生成按优先级和前置依赖组织的阶段性学习计划。
+            </p>
+            <ul>
+              <li>采用单 Agent 状态循环与 Pydantic 结构化输出，以版本化 Skill 固化岗位分析和学习规划业务 SOP。</li>
+              <li>通过 MCP 接入 TXT、Markdown、PDF 解析、技能知识检索与用户档案工具，以 SQLite 管理会话和长期记忆。</li>
+              <li>构建 20+ 条评估集与 JSONL Trace，覆盖路由、SOP、工具契约和记忆隔离；实现超时、重试、降级和最大步骤保护。</li>
+              <li>提供 FastAPI、流式 Web UI、环境变量密钥管理与 Docker 部署，并支持用户查看、修改和删除长期记忆。</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal tilt-card">
+            <div class="project-topline">
+              <span>硕士毕业项目 / 已完成</span>
+              <span>Plan4MC · MineDojo</span>
             </div>
             <h3>基于 LLM 的开放世界游戏任务规划代理</h3>
             <p>
-              面向开放世界游戏场景，研究任务理解、目标分解、行动规划与执行反馈，使代理能够根据游戏状态生成可执行的任务步骤。
+              在 Plan4MC / MineDojo 中实现 grounded prompt、结构化计划解析、确定性校验、真实游戏执行与 feedback-driven re-planning，并记录可复现的 trace、延迟、调用次数和 token。
             </p>
             <ul>
-              <li>探索提示设计、上下文管理与迭代式规划。</li>
-              <li>关注复杂任务中的自主性、可解释性与执行闭环。</li>
+              <li>DeepSeek v4 Pro 在 7 项离线任务中生成 7/7 个有效计划。</li>
+              <li>完成 60 局固定 seed 主实验；重规划将 Milk 成功率由 40% 提升至 70%，Carpet 由 0% 提升至 30%。</li>
+              <li>Symbolic baseline 仍达 100% / 80%；诊断定位低层 policy 方差与操作恢复瓶颈，提出 symbolic 默认、LLM 选择性修复的 hybrid 架构。</li>
             </ul>
           </article>
 
@@ -132,7 +150,11 @@
         <div class="skill-board">
           <div class="skill-column reveal">
             <h3>AI 与研究</h3>
-            <p>LLM Agent、开放世界游戏任务规划、PV-RCNN、YOLOv8、OpenPCDet、KITTI、LiDAR-Camera late fusion</p>
+            <p>LLM Agent、RAG、开放世界游戏任务规划、PV-RCNN、YOLOv8、OpenPCDet、KITTI、LiDAR-Camera late fusion</p>
+          </div>
+          <div class="skill-column reveal">
+            <h3>智能体工程</h3>
+            <p>Agent Loop、Pydantic、Skill SOP、MCP、Memory、FastAPI、SQLite、Docker、pytest、JSONL Trace</p>
           </div>
           <div class="skill-column reveal">
             <h3>编程与嵌入式</h3>
@@ -141,10 +163,6 @@
           <div class="skill-column reveal">
             <h3>硬件与测试</h3>
             <p>Altium Designer、嘉立创 PCB 绘制、EMC 测试、元器件选型替代</p>
-          </div>
-          <div class="skill-column reveal">
-            <h3>AI 效率工具</h3>
-            <p>Codex、Claude Code，用于研究整理、代码辅助与文档迭代。</p>
           </div>
         </div>
       </section>
@@ -159,7 +177,7 @@
           <article class="timeline-item reveal">
             <time>2026.01 - 至今</time>
             <h3>利物浦大学 · 数据科学与人工智能硕士</h3>
-            <p>学习数据库和信息系统、应用人工智能、人工智能和通信等方向课程，正在推进 LLM 游戏代理研究。</p>
+            <p>学习数据库和信息系统、应用人工智能、人工智能和通信等方向课程，已完成 LLM 开放世界游戏任务规划代理研究。</p>
           </article>
           <article class="timeline-item reveal">
             <time>2024.07 - 2025.01</time>
